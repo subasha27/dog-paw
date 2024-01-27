@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import {  useNavigate } from 'react-router-dom';
 import close from "../assets/close.png";
 import drawer from "../assets/drawer.png";
 import ticket from "../assets/ticket.png";
@@ -8,9 +8,7 @@ import toast, { Toaster } from 'react-hot-toast';
 
 function Home() {
     const [panelVisible, setPanelVisible] = useState(false);
-    const [isLoggedIn, setIsLoggedIn] = useState(false);
-    const [adminDropdownVisible, setAdminDropdownVisible] = useState(false);
-    const [ownerDropdownVisible, setOwnerDropdownVisible] = useState(false);
+    /* const [ownerDropdownVisible, setOwnerDropdownVisible] = useState(false); */
     const panelRef = useRef(null);
     const navigate = useNavigate();
 
@@ -27,16 +25,16 @@ function Home() {
         navigate('/');
     };
 
-    const goToOwnerPage = () => {
+    /* const goToOwnerPage = () => {
         setOwnerDropdownVisible(!ownerDropdownVisible);
-    }
+    } */
 
-    const goToOwnerInitialLogin = () => {
+   /*  const goToOwnerInitialLogin = () => {
         if (!isLoggedIn) {
             navigate('/OwnerInitialLogin');
             closePanel();
         }
-    }
+    } */
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -80,21 +78,21 @@ function Home() {
                     <div className='pannelContent'>
                         <h2 onClick={goToMainPage}>HOME</h2>
 
-                        {adminDropdownVisible && (
+                       {/*  {adminDropdownVisible && (
                             <div className="adminDropdown">
-                                {/* <p onClick={goToAdminLogin}>Admin-Login</p>
+                                 <p onClick={goToAdminLogin}>Admin-Login</p>
                                 <p onClick={goToImageAddPage}>Theatre-Image</p>
-                                <p onClick={goToOwnerCreation}>Owner-Creation</p> */}
+                                <p onClick={goToOwnerCreation}>Owner-Creation</p> 
                             </div>
                         )}
                         <h5 onClick={goToOwnerPage}>Owner</h5>
                         {ownerDropdownVisible && (
                             <div className="ownerDropdown">
                                 <p onClick={goToOwnerInitialLogin}>owner-Initial-Login</p>
-                                {/* <p onClick={goToOwnerLogin}>owner-Login</p>
-                                <p onClick={goToTheatreCreation}>Theatre-Creation</p> */}
+                                <p onClick={goToOwnerLogin}>owner-Login</p>
+                                <p onClick={goToTheatreCreation}>Theatre-Creation</p> 
                             </div>
-                        )}
+                        )} */}
                     </div>
                 </div>
             )}
