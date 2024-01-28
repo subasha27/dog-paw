@@ -84,7 +84,7 @@ function Home() {
           </div>
         </div>
         {activeBox && (
-          <div className="text-box">
+          <div className="text-box" style={{ display: activeBox ? 'block' : 'none' }}>
             {renderText()}
           </div>
         )}
