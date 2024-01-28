@@ -10,6 +10,7 @@ body {
 }
 
 .Logo {
+  margin-bottom: 70px;
   display: flex;
   align-items: center;
   cursor: pointer;
@@ -24,11 +25,16 @@ body {
   animation: spin-reverse 0.2s linear 1;
 }
 
+.button-container {
+  display: flex;
+  align-items: center;
+}
+
 .buttons {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  margin-left: 10px;
+  margin-bottom: 70px;
+  gap: 70px;
   opacity: 0;
   transition: opacity 0.5s ease-in-out;
 }
@@ -49,6 +55,7 @@ body {
   background-color: #ff8c00;
 }
 
+
 @keyframes spin {
   to {
     transform: rotate(360deg);
@@ -60,6 +67,8 @@ body {
     transform: rotate(-360deg);
   }
 }
+
+
 
 .bubbles {
   position: absolute;
@@ -239,4 +248,16 @@ body {
     bottom: 1080px;
     transform: translateX(-200px);
   }
+}
+
+
+.text-box {
+  position: absolute;
+  top: 80%; /* Position below the logo */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%);
+  background-color: #fff; /* Set background color */
+  padding: 10px; /* Add padding for better visibility */
+  border: 1px solid #ccc; /* Add a border */
+  display: ${activeBox ? 'block' : 'none'}; /* Show/hide based on activeBox state */
 }

@@ -1,8 +1,10 @@
 import React, { useState, useRef, useEffect } from 'react';
-import {  useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import close from "../assets/close.png";
-import drawer from "../assets/drawer.png";
+// import drawer from "../assets/drawer.png";
 import ticket from "../assets/ticket.png";
+import star from "../assets/star.png";
+import MusicPlayer from './music';
 import "./header.css";
 import toast, { Toaster } from 'react-hot-toast';
 
@@ -29,12 +31,12 @@ function Home() {
         setOwnerDropdownVisible(!ownerDropdownVisible);
     } */
 
-   /*  const goToOwnerInitialLogin = () => {
-        if (!isLoggedIn) {
-            navigate('/OwnerInitialLogin');
-            closePanel();
-        }
-    } */
+    /*  const goToOwnerInitialLogin = () => {
+         if (!isLoggedIn) {
+             navigate('/OwnerInitialLogin');
+             closePanel();
+         }
+     } */
 
     useEffect(() => {
         const handleClickOutside = (event) => {
@@ -59,13 +61,15 @@ function Home() {
 
     return (
         <div className="App">
+
             <div className='header'>
                 <div className='image'>
-                    <img onClick={togglePanel} src={drawer} alt="drawer" />
+                    {/* <img onClick={togglePanel} src={drawer} alt="drawer" /> */}
                 </div>
                 <div className='name'>
-                    <h1 onClick={goToMainPage} >Coin</h1>
-                    <Toaster position="top-right"  reverseOrder={false}/>
+                    <h9 onClick={goToMainPage} >Coin</h9>
+                    <img className='Stars1' onClick={togglePanel} src={star} alt="Dont Click here" height={30} width={30}/>
+                    <Toaster position="top-right" reverseOrder={false} />
                 </div>
             </div>
 
@@ -75,10 +79,12 @@ function Home() {
                         <div className='ticket'><img src={ticket} alt='Ticket' height="70" width="70" /></div>
                         <div className="close"><img onClick={closePanel} src={close} alt="close" height="30" width="30" /></div>
                     </div>
-                    <div className='pannelContent'>
-                        <h2 onClick={goToMainPage}>HOME</h2>
 
-                       {/*  {adminDropdownVisible && (
+                    <div className='pannelContent'>
+                        <p>If your are seeing this secretlty hidden pannel which means david still didnt fix it.we will fix it sooner</p>
+                        <p>While you are here if you want there are some music available</p>
+
+                        {/*  {adminDropdownVisible && (
                             <div className="adminDropdown">
                                  <p onClick={goToAdminLogin}>Admin-Login</p>
                                 <p onClick={goToImageAddPage}>Theatre-Image</p>
@@ -93,6 +99,8 @@ function Home() {
                                 <p onClick={goToTheatreCreation}>Theatre-Creation</p> 
                             </div>
                         )} */}
+
+                        <MusicPlayer className='music-player'/>
                     </div>
                 </div>
             )}

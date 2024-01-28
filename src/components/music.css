@@ -1,0 +1,66 @@
+  .audioCon button {
+    padding: 10px;
+    background-color: rgba(255, 0, 85, 0.781);
+    color: rgb(78, 10, 10);
+    border-radius: 10px;
+    cursor: pointer;
+    width: 120px;
+    margin-top:5%;
+    margin-left: 10%;
+    font-family: cursive;
+    font-weight: bolder;
+  }
+
+  .play-timer{
+    color: #8c03fc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top:30px;
+    margin-right:7px;
+    font-size: medium;
+    font-weight: bolder;
+  }
+  
+
+  .audioCon .volumeSlider{
+    margin-top:5%;
+    margin-left: 27%;
+    color: rgba(226, 9, 118, 0.384);
+  }
+
+
+  .audioCon .volumeSlider {
+    -webkit-appearance: none;
+    width: 50%;
+    height: 5px;
+    border-radius: 5px;
+    background: #8c03fc;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+  }
+  
+  .volumeSlider:hover {
+    opacity: 1;
+  }
+  
+  /* Customize the appearance of the volume thumb */
+  .volumeSlider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #c503ccd5;
+    cursor: pointer;
+  }
+  
+  .volumeSlider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+  }

@@ -1,23 +1,29 @@
 .name {
     cursor: pointer;
+    font-size: 2em;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    margin: 0; /* Remove any default margin to ensure proper centering */
+    margin-left:40px;
+  }
+  
+.Stars1{
+    display: inline;
+    padding-left:10px;
 }
 
 .header {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
-    background: linear-gradient(90deg, #9055FF,#ED7B84 );
-    height: 60px;  
+    justify-content: center;
+    background: linear-gradient(90deg, #9055FF, #ED7B84);
+    height: 60px;
 }
 
 .image img {
     width: 50px;
     height: 50px;
-}
-
-.name {
-    margin-right: auto;
-    margin-left: 10px;
 }
 
 .btn1 {
@@ -57,13 +63,13 @@
 
 .panel {
     position: absolute;
-    top: 0;
+    top: 20;
     left: 0;
-    width: 200px;
-    height: 100vh;
+    width: 350px;
+    height: 500px;
     color: rgb(87, 82, 82);
     font-size: 15px;
-    background-color: #ffffff;
+    background-color: #fa4fb8bd;
     box-shadow: 2px 5px 5px rgb(104, 97, 97);
     z-index: 1000;
 
@@ -88,29 +94,16 @@
 }
 
 
-.pannelContent h2 {
-    display: flex;
-    justify-content: center;
+.pannelContent p {
     font-size: medium;
-
-    cursor: pointer;
+    font-family: cursive;
+    font-weight: bolder;
+    padding-left: 10px;
+    color: #580303;
 }
 
-.pannelContent h4 {
-    display: flex;
-    justify-content: center;
 
-    font-size: medium;
-    cursor: pointer;
-}
 
-.pannelContent h5 {
-    display: flex;
-    justify-content: center;
-
-    font-size: medium;
-    cursor: pointer;
-}
 
 .hide-icon {
     cursor: pointer;
